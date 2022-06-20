@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header_img">
+                <a href=""><img src="./image 20.png" alt=""></a>
+            </div>
+<div class="menu">
+    <ul class="nav">
+        <li><a href="">Games</a></li>
+        <li><a href="">Champion</a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+        <li><a href=""></a></li>
+    </ul>
+</div>
+        </div>
+        <div class="content">
+
+            <div class="bander">
+               <a href=""><img src="./image 49.jpg" alt=""></a>
+            </div>
+            <div class="title">
+            <h1 class="">Fiora</h1>
+            <p>The most feared duelist in all Valoral</p>
+        </div>
+        <div class="content_main">
+            <div class="item">
+                <div class="iteam_img"><a href=""><img src="./image 50.jpg" alt=""></a></div>
+                <div class="iteam_desc">
+                    <p class="item_title">
+                        LUNGE
+                    </p>
+                    <p class="item_desc">Fiora lunges in a direction and stabs a nearby enemy, dealing physical damage and applying on-hit effects.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="iteam_img"><a href=""><img src="./image 50.jpg" alt=""></a></div>
+                <div class="iteam_desc">
+                    <p class="item_title">
+                        LUNGE
+                    </p>
+                    <p class="item_desc">Fiora lunges in a direction and stabs a nearby enemy, dealing physical damage and applying on-hit effects.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="iteam_img"><a href=""><img src="./image 50.jpg" alt=""></a></div>
+                <div class="iteam_desc">
+                    <p class="item_title">
+                        LUNGE
+                    </p>
+                    <p class="item_desc">Fiora lunges in a direction and stabs a nearby enemy, dealing physical damage and applying on-hit effects.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="iteam_img"><a href=""><img src="./image 50.jpg" alt=""></a></div>
+                <div class="iteam_desc">
+                    <p class="item_title">
+                        LUNGE
+                    </p>
+                    <p class="item_desc">Fiora lunges in a direction and stabs a nearby enemy, dealing physical damage and applying on-hit effects.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bander">
+            <a href=""><img src="./image 49.jpg" alt=""></a>
+         </div>
+        </div>
+        <div class="footer">
+            <div class="footer_logo">
+                <a href=""><img src="./image 20.png" alt=""></a>
+            </div>
+            <div>
+            <div class="form">
+                <input type="email"placeholder="Email ..." id="eamil">
+                <button>Send</button>
+
+            </div>
+            <p id="err"></p>
+        </div>
+
+        </div>
+    </div>
+    <script>
+        let input_= document.querySelector('input');
+
+    let regex=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})$/;
+    let regex_2= /^\S+@\S+\.\S$/
+    let btn_send= document.querySelector("button");
+    btn_send.addEventListener("click",function(e){
+        e.preventDefault();
+        if(input_.value=="false"){
+document.getElementById("err").innerHTML=""
+return false;
+        }
+        if(regex.test(input_.value)==false){
+document.getElementById("err").innerHTML="Bạn nhập sai định dạng email";
+return false;
+        }
+
+    })
+    </script>
+</body>
+
+</html>

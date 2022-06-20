@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .flex{
+        display: flex;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <img src="https://hc.com.vn/i/ecommerce/media/GS.008506_FEATURE_93612.jpg" alt="">
+        <h1 class="product_detal">
+            iPhone 13 Promax
+        </h1>
+        <p class="price" data-price="1199">1199$</p>
+        <input type="text" placeholder="Mòi nhập số lượng" id="quantity">
+        <p class="error"></p>
+        <button class="btn_buy">Buy Now</button>
+        <hr>
+        <div class="flex">
+            <h2>Product Name:</h2>
+            <h2 class="show_title"></h2>
+        </div>
+        <div class="flex">
+            <h2>Quantity:</h2>
+            <h2 class="show_quantity"></h2>
+        </div>
+        <div class="flex">
+            <h2>Price:</h2>
+            <h2 class="show_price"></h2>
+        </div>
+        <div class="flex">
+            <h2>Amount:</h2>
+            <h2 class="show_amount"></h2>
+        </div>
+    </div>
+    <script>
+        const $ = document.querySelector.bind(document);
+        const product_detal = $(".product_detal");
+        const btn_buy = $(".btn_buy");
+        const price = $(".price");
+        const quantity = $("#quantity");
+        const show_quantity = $(".show_quantity");
+        const show_title = $(".show_title");
+        const show_price = $(".show_price");
+        const show_amount = $(".show_amount");
+        const error = $(".error");
+        quantity.focus();
+        function sum(quantitys) {
+            return quantitys*price.getAttribute("data-price");
+
+        }
+        function submit_ ()  {
+            // console.log(quantity.value)
+            if (quantity.value.length ==0 || isNaN(quantity.value)) {
+                error.innerText = "MỜi bạn nhập số lượng vào ";
+                return false
+            }
+            else{
+                error.innerHTML="";
+                // e.preventDefault();
+                show_title.innerHTML = product_detal.innerHTML;
+                show_price.innerHTML = price.innerHTML;
+                show_quantity.innerHTML=quantity.value;
+                // console.log(quantity.value);
+                
+                show_price.innerHTML=`${sum(Number(quantity.value))}`+"$";
+            // }
+            // else {
+            //     error("Mời bạn nhập vào số lượng");
+            //     return false
+
+            // }
+            }
+            
+        }
+        btn_buy.onclick = submit_;
+
+
+    </script>
+</body>
+
+</html>

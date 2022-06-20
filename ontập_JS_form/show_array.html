@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <input type="text" class="input">
+        <button class="btn">Add user</button>
+        <ul>
+
+        </ul>
+    </div>
+    <script>
+        var input = document.querySelector(".input");
+        var ul_ = document.querySelector("ul");
+        var arrayName = ["dat", "tan"];
+        var btn = document.querySelector(".btn");
+        input.focus();
+        btn.addEventListener("click", function () {
+            if (input.value.length == 0) {
+                alert("chưa nhập giá trị ")
+                return false;
+            }
+            else {
+                arrayName.push(input.value);
+                console.log(arrayName)
+                arrayName.forEach(function (item) {
+                    ul_.innerHTML += `<li>${item}</li>`;
+                })
+                input.value = null;
+        input.focus();
+
+                return true;
+            }
+        })
+    </script>
+</body>
+
+</html>

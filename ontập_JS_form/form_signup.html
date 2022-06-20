@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
+    <title>Document</title>
+</head>
+
+<body class="flex justify-center align-content flex-direction-column">
+
+    <form action="" onsubmit="return validateForm()" class="w-96 text-lg">
+
+        <div>
+            <lable>
+                Username
+            </lable><br>
+            <input type="text" id="username" placeholder="username" class="border">
+            <p id="error_user"></p>
+        </div>
+        <div>
+            <label for="">
+                Password
+            </label>
+            <br>
+            <input type="password" id="password" placeholder="password" class="border boder-1">
+            <p id="error_password"></p>
+            <button class="border boder-1 bg-red-600  rounded-t-xl">Đăng Nhập</button>
+        </div>
+
+    </form>
+    <script>
+        function loi(element, msg) {
+            document.getElementById(element).innerHTML = msg;
+        }
+        function validateForm() {
+             flage = false;
+            let username = document.querySelector("#username");
+            let password = document.querySelector("#password");
+        
+            if (username.value == "" ) {
+                loi("error_user", "không đc để trống");
+               flage =false;
+            
+            
+            } else if (username.value.length < 5) {
+                loi("error_user", "tên phải lớn hơn 5 kí tự");
+               
+                flage =false;
+               
+            }
+            else{
+                loi("error_user", "");
+            }
+
+
+            
+            if (password.value.length ==0 ) {
+                loi("error_password", "không đc để trống");
+               flage =false;
+               
+            }
+           else if (password.value.length < 5) {
+                loi("error_password", "mật khẩu phải lớn hơn 5 kí tự");
+                flage =false;
+               
+
+            }
+            else{
+                loi("error_password", "");
+            }
+
+
+            
+            if (flage == false) {
+                return false;
+            }
+            else {
+                alert("Đăng nhập thành công");
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

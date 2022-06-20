@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 980px;
+            margin: 0 auto;
+        }
+
+        .add_user_name_- {
+            display: flex;
+            margin-top: 20px;
+        }
+        button, input{
+
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #fff;
+            border:1px solid gray;
+        }
+        button{
+            margin: 0px 10px ;
+        }
+        .hidden_i{
+            display: block;
+        }
+        .block{display:none;}
+    </style>
+    <div class="container">
+        <div class="show_user">
+            <table border="1" width="50%">
+                <tr>
+                    <th>
+                        STT
+                    </th>
+                    <th>
+                        Tên user
+                    </th>
+                </tr>
+                <tbody id="show_username">
+
+                </tbody>
+            </table>
+        </div>
+
+        <!-- <ul id="root">
+
+    </ul>  -->
+        <div class="add_user_name_-">
+          
+                <input type="text" placeholder="Nhập user" id="input">
+           
+            <button id="submit">Add</button>
+
+        </div>
+        <p id="error_"></p>
+
+        <div class="add_user_name_-">
+            <div>
+                <input type="text" placeholder="Nhập vào user cần xóa" id="input_xoa">
+                <p id="error_xoa"></p>
+            </div>
+            <button id="xoa">Xóa</button>
+            <button id="xoa_all">Xóa tất cả</button>
+        </div>
+
+  
+    <div class="add_user_name_- block">
+        <input type="text" value="" class="upade_input" placeholder="Nhâp user update">
+
+        <button class="upade_button">Update</button>
+    </div>
+    
+    <div class="add_user_name_- hidden_i" >
+        <input type="text" class="id_user_upadet" placeholder="Nhâp tên user sửa">
+        <button class="btn_add_sua">ADD đẻ sửa</button>
+    </div>
+    <p id="error_upadet"></p>
+
+    
+</div>
+    <script src="./script.js"></script>
+
+
+</body>
+
+</html>
